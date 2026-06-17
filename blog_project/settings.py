@@ -33,6 +33,10 @@ DEBUG = os.environ.get('DEBUG', 'True').lower() == 'true'
 
 # 允许访问的主机名
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
+ALLOWED_HOSTS = os.environ.get(
+    'ALLOWED_HOSTS',
+    '127.0.0.1,localhost,web-production-d89c6.up.railway.app'
+).split(',')   
 
 
 # Application definition
