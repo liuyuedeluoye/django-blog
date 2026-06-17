@@ -143,3 +143,8 @@ STATIC_URL = '/static/'
 LOGIN_URL = 'login'                    # 未登录用户访问保护页面时跳转到登录页
 LOGIN_REDIRECT_URL = 'index'           # 登录成功后跳转到首页
 LOGOUT_REDIRECT_URL = 'index'          # 登出后跳转到首页
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-d89c6.up.railway.app',
+]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
